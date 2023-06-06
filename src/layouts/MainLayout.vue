@@ -27,9 +27,33 @@
       </q-toolbar>
     </q-header>
 
-    <q-page-container id="home-page" class="bg-indigo-2 text-indigo-14">
+    <q-footer bordered class="bg-blue-grey-10 text-primary">
+      <div class="row text-grey-8  q-ma-sm">
+        <div class="col-5 column items-center q-pa-sm">
+          <div class="row">veelcar.com</div>
+          <div class="row">
+            Madampe,
+          </div>
+          <div class="row">Sri Lanka.</div>
+        </div>
+        <div class="col-2 column items-center q-pa-auto">
+          <div class="row">Contact us</div>
+          <div class="row text-indigo-2">
+            <i class="fa-brands fa-facebook-f q-px-xs"></i>Facebook
+          </div>
+          <div class="row text-indigo-2"><i class="fa-brands fa-twitter q-px-xs "></i>Twiter</div>
+        </div>
+        <div class="col-4 column items-center q-pa-sm ">
+          <div class="row">It's all about vehicles</div>
+        </div>
+      </div>
+    </q-footer>
+
+    <q-page-container id="home-page" class="bg-indigo-1 text-indigo-3">
       <router-view />
     </q-page-container>
+
+
 
   </q-layout>
 </template>
