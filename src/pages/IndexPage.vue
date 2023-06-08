@@ -12,10 +12,10 @@
     </div>
     <div class="row">
       <div class="col row justify-end q-mx-sm">
-        <q-btn outline rounded color="indigo-14">Comapre</q-btn>
+        <router-link to="/compare"><q-btn outline rounded color="indigo-14">Compare</q-btn></router-link>
       </div>
       <div class="col q-mx-sm">
-        <q-btn outline rounded color="indigo-14">Search</q-btn>
+        <router-link to="/search"><q-btn outline rounded color="indigo-14">Search</q-btn></router-link>
       </div>
     </div>
   </div>
@@ -34,6 +34,9 @@ export default defineComponent({
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 
+a {
+  text-decoration: none;
+}
 
 #main-title {
   font-family: 'Kalam', cursive;

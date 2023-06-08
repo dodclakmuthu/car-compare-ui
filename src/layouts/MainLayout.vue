@@ -10,12 +10,13 @@
         <div class="q-pa-md">
           <q-btn-dropdown split color="indigo-2" text-color="indigo-14" rounded label="Tools">
             <q-list>
-              <q-item clickable v-close-popup>
-                <q-item-section>
-                  <q-item-label>Compare tool</q-item-label>
-                </q-item-section>
-              </q-item>
-
+              <router-link to="/compare">
+                <q-item clickable v-close-popup>
+                  <q-item-section>
+                    <q-item-label>Compare tool</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </router-link>
               <q-item clickable v-close-popup>
                 <q-item-section>
                   <q-item-label>Search tool</q-item-label>

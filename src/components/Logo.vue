@@ -1,7 +1,9 @@
 <template>
-    <div class="logo text-indigo-14 text-weight-bold">
-        VEEL<span :class="carColor">CAR</span>
-    </div>
+    <router-link to="/">
+        <div class="logo text-indigo-14 text-weight-bold">
+            VEEL<span :class="carColor">CAR</span>
+        </div>
+    </router-link>
 </template>
 
 <script>
