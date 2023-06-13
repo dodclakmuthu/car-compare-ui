@@ -27,7 +27,7 @@
         </div>
       </q-toolbar>
     </q-header>
-
+    <!-- 
     <q-footer bordered class="bg-blue-grey-10 text-primary">
       <div class="row text-grey-8  q-ma-sm">
         <div class="col-5 column items-center q-pa-sm">
@@ -48,7 +48,7 @@
           <div class="row">It's all about vehicles</div>
         </div>
       </div>
-    </q-footer>
+    </q-footer> -->
 
     <q-page-container id="home-page" class="bg-indigo-1 text-indigo-3">
       <router-view />
@@ -73,6 +73,6 @@ export default defineComponent({
 
 <style>
 #home-page {
-  height: 100vh;
+  min-height: 100vh;
 }
 </style>
