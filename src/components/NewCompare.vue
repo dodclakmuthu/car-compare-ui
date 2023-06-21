@@ -8,10 +8,10 @@
         </q-card-section>
         <q-card-section>
             <q-select rounded dense outlined label="Make" transition-show="jump-up" transition-hide="jump-up"
-                v-model="model" :options="makes" />
+                :options="makes" v-model="make" />
         </q-card-section>
         <q-card-section>
-            <q-input rounded dense outlined bg-color="blue-2" color="blue-grey-10" v-model="text" label="Model" />
+            <q-input rounded dense outlined bg-color="blue-2" v-model="model" color="blue-grey-10" label="Model" />
         </q-card-section>
         <q-card-section class="row justify-center">
             <q-btn color="blue-grey-10" @click="addNewCarToComparisons" label="Add"><i
@@ -27,6 +27,10 @@ import { ref } from 'vue'
 export default {
     name: "NewCompare",
     setup(props, context) {
+
+        const model = ref("")
+        const make = ref("")
+
         const makes = ref([
             "Toyota", "Nissan", "BMW", "Benz"
         ])
@@ -35,7 +39,7 @@ export default {
             context.emit('addModelId', Math.round(Math.random() * 100000000))
         }
 
-        return { makes, addNewCarToComparisons }
+        return { makes, addNewCarToComparisons, model, make }
     },
     emits: ["addModelId"]
 }

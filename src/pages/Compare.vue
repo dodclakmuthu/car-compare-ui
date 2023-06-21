@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
+import { ref, watch, computed } from 'vue';
 
 import NewCompare from 'src/components/NewCompare.vue';
 import ComapreDetailBox from 'src/components/ComapreDetailBox.vue';
@@ -23,10 +23,11 @@ export default {
         }
 
         const deleteComaprison = function (deleteId) {
+            console.log(comparisons.value.length)
             comparisons.value = comparisons.value.filter(function (comp) {
-                console.log(comp.id, deleteId)
                 return comp.id !== deleteId
             })
+            console.log(comparisons.value.length)
         }
 
 
@@ -34,12 +35,13 @@ export default {
         const showNewComapre = ref(true)
 
         watch(comparisons.value, (newcomparisons, oldComparisons) => {
+            console.log("comparison change")
             if (newcomparisons.length > 3) {
                 showNewComapre.value = false;
+            } else {
+                showNewComapre.value = true;
             }
         })
-
-
 
         return {
             comparisons, addComarison, showNewComapre, deleteComaprison
